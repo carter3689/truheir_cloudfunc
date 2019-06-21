@@ -1,0 +1,135 @@
+<header class="hero">
+  <div class="center-content">
+    <h1 class="mdb-color white-text">Welcome to Tru Heir Inc</h1>
+    <a href="#" class="button">Join Our Mailing List!</a>
+  </div>
+</header>
+
+<!--Mission Statement-->
+
+<main>
+  <div>
+    <h1 class="mission">Our Mission</h1>
+        <blockquote class="blockquote text-center">
+            <p class="mb-0">Tru Heir Inc. aims, first and foremost, to educate and empower clientele about the nuances of the real estate industry including, but not limited to, topics such as property purchase, rehabilitation, and sales.</p>
+            <footer class="blockquote-footer mb-3">Tru Heir Inc Team</footer>
+          </blockquote>
+  </div>
+</main>
+
+
+<section class="breweries" id="breweries">
+    <ul>
+      <li>
+        <figure>
+          <!-- Photo by Drew Farwell on Unsplash -->
+          <img src="https://images.unsplash.com/photo-1536640712-4d4c36ff0e4e" alt="Several friends doing a toast">
+        </figure>
+        <h4>We help our clients create generational wealth! </h4>
+        <p class="lead">
+          Our vast amounts of knowledge in regards to Real Estate have helped our clients build and sustain wealth that can be passed down. We would love to do the same for you!
+        </p>
+      </li>
+      <li>
+          <figure>
+            <!-- Photo by Quentin Dr on Unsplash -->
+            <img src="https://images.unsplash.com/photo-1526948531399-320e7e40f0ca" alt="Several hands holding beer glasses">
+          </figure>
+          <h4>Learn about Real Estate and what it can build for you!</h4>
+          <p>
+            Would you like to understand what Real Estate investing can build for your future? Sign up to attend our next session!
+          </p>
+          <button type="button" mdbBtn color="indigo" rounded="true" data-toggle="modal" data-target="#basicExample"
+          (click)="frame.show()" mdbWavesEffect>Sign Up</button>
+        </li>
+        <!--MODAL HTML-->
+        <div mdbModal #frame="mdbModal" class="modal fade left" id="frameModalTop" tabindex="-1" role="dialog"
+        aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header text-center">
+              <h4 class="modal-title w-100 font-weight-bold">Subscribe</h4>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close" (click)="frame.hide()">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body mx-3">
+              <div class="md-form mb-5">
+                <input type="text" id="form3" class="form-control validate" [formControl]="subscriptionFormModalName"
+                  mdbInput #name>
+                <label data-error="wrong" data-success="right" for="form3">Your name</label>
+              </div>
+      
+              <div class="md-form mb-4">
+                <input type="email" id="form2" class="form-control validate" [formControl]="subscriptionFormModalEmail"
+                  mdbInput #email>
+                <label data-error="wrong" data-success="right" for="form2">Your email</label>
+              </div>
+      
+            </div>
+            <div class="modal-footer d-flex justify-content-center">
+              <button mdbBtn color="indigo" (click)="submitForm(name.value,email.value)" class="waves-light" mdbWavesEffect>Send
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--MODAL HTML END-->
+
+      <!--Contact Card-->
+      <li>
+        <figure>
+          <!-- Photo by Rawpixel on Unsplash -->
+          <img src="https://images.unsplash.com/photo-1495603889488-42d1d66e5523" alt="Three different glasses of beer">
+        </figure>
+        <h4>We want love hearing from you!</h4>
+        <p>
+          If you've worked with us in the past, please drop us a line! We want to know how to serve you better!
+        </p>
+        <button type="button" mdbBtn color="indigo" rounded="true" data-toggle="modal" data-target="#basicExample"
+        (click)="framecontact.show()" mdbWavesEffect>Send Us A Message!</button>
+      </li>
+
+      <div mdbModal #framecontact="mdbModal" class="modal fade left" id="frameModalTop" tabindex="-1" role="dialog"
+  aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">Write to us</h4>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close" (click)="framecontact.hide()">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="form34" class="form-control validate" mdbInput [formControl]="contactFormModalName" #name>
+          <label data-error="wrong" data-success="right" for="form34">Your name</label>
+        </div>
+
+        <div class="md-form mb-5">
+          <input type="email" id="form29" class="form-control validate" mdbInput [formControl]="contactFormModalEmail" #email>
+          <label data-error="wrong" data-success="right" for="form29">Your email</label>
+        </div>
+
+        <div class="md-form mb-5">
+          <input type="text" id="form32" class="form-control validate" mdbInput [formControl]="contactFormModalSubject" #subject>
+          <label data-error="wrong" data-success="right" for="form32">Subject</label>
+        </div>
+
+        <div class="md-form">
+          <textarea type="text" id="form8" class="md-textarea form-control" rows="1" mdbInput
+            [formControl]="contactFormModalMessage" #message></textarea>
+          <label data-error="wrong" data-success="right" for="form8">Your message</label>
+        </div>
+
+      </div>
+      <div class="modal-footer d-flex justify-content-center">
+        <button mdbBtn  (click)="submitContact(name.value,email.value,subject.value,message.value)" color="unique" class="waves-light" mdbWavesEffect>Send
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+    </ul>
+  </section>
