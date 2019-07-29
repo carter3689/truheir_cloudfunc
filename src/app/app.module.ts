@@ -15,16 +15,9 @@ import { AngularFireModule } from '@angular/fire';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { AngularFireStorageModule } from '@angular/fire/storage';
 import { AngularFireAuthModule } from '@angular/fire/auth';
+import { AngularFireFunctionsModule } from '@angular/fire/functions';
+import { firebaseConfig } from '../environments/environment'
 
-const firebaseConfig = {
-  apiKey: "AIzaSyA2i7GNt5semTe0Ca5nDgJ-U98DtB6VS9I",
-  authDomain: "jumpstart-clients.firebaseapp.com",
-  databaseURL: "https://jumpstart-clients.firebaseio.com",
-  projectId: "jumpstart-clients",
-  storageBucket: "",
-  messagingSenderId: "756317164337",
-  appId: "1:756317164337:web:76a9cabe7630e16a"
-};
 
 @NgModule({
   declarations: [
@@ -40,7 +33,8 @@ const firebaseConfig = {
     AngularFireModule.initializeApp(firebaseConfig),
     AngularFirestoreModule, // firestore
     AngularFireAuthModule, // auth
-    AngularFireStorageModule // storage
+    AngularFireStorageModule, // storage
+    AngularFireFunctionsModule
   ],
   providers: [],
   bootstrap: [AppComponent],
