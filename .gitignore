@@ -46,4 +46,4 @@ testem.log
 Thumbs.db
 
 #Environment API
-/environments/environments.ts
+/environments/environment.ts
