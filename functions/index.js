@@ -45,3 +45,21 @@ exports.firestoreEmail = functions.firestore
                     .catch(err => console.log(err))
     });
 
+
+
+    exports.genericEmail = functions.https.onCall(async (data,context) => {
+        const msg = {
+            to:'joelc@doubleedgesoftware.com',
+            from:'joelc@doubleedgesoftware.com',
+            templateId:'d-befd85489de84fd69575f5ae2afdd49e',
+            dynamic_template_data: {
+                name:data.text
+            }
+        }
+
+        await sgMail.send(msg);
+
+
+        return { success: true};
+    });
+
