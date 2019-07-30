@@ -40,7 +40,8 @@
             Would you like to understand what Real Estate investing can build for your future? Sign up to attend our next session!
           </p>
           <button type="button" mdbBtn color="indigo" rounded="true" data-toggle="modal" data-target="#basicExample"
-          (click)="frame.show()" mdbWavesEffect>Sign Up</button>
+          (click)="frame.show()" mdbWavesEffect>Sign Up
+  </button>
         </li>
         <!--MODAL HTML-->
         <div mdbModal #frame="mdbModal" class="modal fade left" id="frameModalTop" tabindex="-1" role="dialog"
@@ -86,50 +87,41 @@
         <p>
           If you've worked with us in the past, please drop us a line! We want to know how to serve you better!
         </p>
-        <button type="button" mdbBtn color="indigo" rounded="true" data-toggle="modal" data-target="#basicExample"
-        (click)="framecontact.show()" mdbWavesEffect>Send Us A Message!</button>
+        <button type="button" mdbBtn color="indigo" rounded="true" data-toggle="modal" data-target="#Example"
+        (click)="frame.show()" mdbWavesEffect>Send Us A Message!</button>
       </li>
 
-      <div mdbModal #framecontact="mdbModal" class="modal fade left" id="frameModalTop" tabindex="-1" role="dialog"
-  aria-labelledby="myModalLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header text-center">
-        <h4 class="modal-title w-100 font-weight-bold">Write to us</h4>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close" (click)="framecontact.hide()">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body mx-3">
-        <div class="md-form mb-5">
-          <input type="text" id="form34" class="form-control validate" mdbInput [formControl]="contactFormModalName" #name>
-          <label data-error="wrong" data-success="right" for="form34">Your name</label>
+      <div mdbModal #frame="mdbModal" class="modal fade left" id="frameModalTop" tabindex="-1" role="dialog"
+      aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header text-center">
+            <h4 class="modal-title w-100 font-weight-bold">Subscribe</h4>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close" (click)="frame.hide()">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body mx-3">
+            <div class="md-form mb-5">
+              <input type="text" id="form3" class="form-control validate" [formControl]="subscriptionFormModalName"
+                mdbInput #name>
+              <label data-error="wrong" data-success="right" for="form3">Your name</label>
+            </div>
+    
+            <div class="md-form mb-4">
+              <input type="email" id="form2" class="form-control validate" [formControl]="subscriptionFormModalEmail"
+                mdbInput #email>
+              <label data-error="wrong" data-success="right" for="form2">Your email</label>
+            </div>
+    
+          </div>
+          <div class="modal-footer d-flex justify-content-center">
+            <button mdbBtn color="indigo" (click)="submitForm(name.value,email.value)" class="waves-light" mdbWavesEffect>Send
+            </button>
+          </div>
         </div>
-
-        <div class="md-form mb-5">
-          <input type="email" id="form29" class="form-control validate" mdbInput [formControl]="contactFormModalEmail" #email>
-          <label data-error="wrong" data-success="right" for="form29">Your email</label>
-        </div>
-
-        <div class="md-form mb-5">
-          <input type="text" id="form32" class="form-control validate" mdbInput [formControl]="contactFormModalSubject" #subject>
-          <label data-error="wrong" data-success="right" for="form32">Subject</label>
-        </div>
-
-        <div class="md-form">
-          <textarea type="text" id="form8" class="md-textarea form-control" rows="1" mdbInput
-            [formControl]="contactFormModalMessage" #message></textarea>
-          <label data-error="wrong" data-success="right" for="form8">Your message</label>
-        </div>
-
-      </div>
-      <div class="modal-footer d-flex justify-content-center">
-        <button mdbBtn  (click)="submitContact(name.value,email.value,subject.value,message.value)" color="unique" class="waves-light" mdbWavesEffect>Send
-        </button>
       </div>
     </div>
-  </div>
-</div>
 
     </ul>
   </section>

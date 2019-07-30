@@ -7,7 +7,7 @@ export const environment = {
 };
 
 export const firebaseConfig = {
-  apiKey: "AIzaSyA2i7GNt5semTe0Ca5nDgJ-U98DtB6VS9I",
+  apiKey: "APIKEY",
   authDomain: "jumpstart-clients.firebaseapp.com",
   databaseURL: "https://jumpstart-clients.firebaseio.com",
   projectId: "jumpstart-clients",

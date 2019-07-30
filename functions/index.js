@@ -53,7 +53,7 @@ exports.firestoreEmail = functions.firestore
             from:'joelc@doubleedgesoftware.com',
             templateId:'d-befd85489de84fd69575f5ae2afdd49e',
             dynamic_template_data: {
-                name:data.text
+                name:data.name
             }
         }
 
